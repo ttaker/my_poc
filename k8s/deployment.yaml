@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poc-streamlit
+  labels:
+    app: poc-streamlit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poc-streamlit
+  template:
+    metadata:
+      labels:
+        app: poc-streamlit
+    spec:
+      containers:
+        - name: poc-streamlit
+          image: poc-streamlit:restored
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8501
