@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://example.com/your-repo.git' # CHANGE this to your repo URL
+    repoURL: 'https://github.com/ttaker/my_poc.git' # CHANGE this to your repo URL
     targetRevision: HEAD
     path: k8s
   destination:
